@@ -8,25 +8,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score
 
-def database_connect():
 
-    user_mysql="root"
-    password_mysql="123456"
-    port_mysql=3306
-    host_mysql="192.168.109.103"
-    # database_mysql="data2"
-    database_mysql = "data_model_compete"
-    charset_mysql="utf8"
-    # 构造mysql连接
-    # conn = pymysql.connect(  user=user_mysql,password=password_mysql,host=host_mysql, port=port_mysql, database=database_mysql, charset=charset_mysql)
-    engine = create_engine('mysql+pymysql://%s:%s@%s:%s/%s?charset=utf8&autocommit=true'
-                           % (user_mysql, password_mysql, host_mysql, port_mysql, database_mysql)
-                           # ,pool_size=10,
-                           # pool_recycle=1600, pool_pre_ping=True,  pool_use_lifo=True,echo_pool=True
-                           , max_overflow=-1
-                           )
-    # 连接数据库
-    return engine
 
 def database_connect1():
 
